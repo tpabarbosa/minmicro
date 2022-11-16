@@ -11,8 +11,8 @@ class TwigRenderer
 {
     protected $twig;
 
-    const CACHE_PATH = __DIR__ . '/../../tmp';//'/tmp';//
-    const TWIG_PUBLIC_PATH = __DIR__ . '/../../tmp/assets';//'/tmp';//__DIR__ . '/../../public/assets';
+    const CACHE_PATH = '/tmp';//__DIR__ . '/../../tmp';//
+    const TWIG_PUBLIC_PATH = '/tmp';//__DIR__ . '/../../tmp/assets';//__DIR__ . '/../../public/assets';
     const TWIG_TEMPLATES_PATH = __DIR__ . '/../../templates';
     private $DEVELOPMENT_MODE;
 
@@ -39,6 +39,9 @@ class TwigRenderer
 
             return $filter->getCallable()($env, $input, ...$args);
         }, ['needs_environment' => true]));
+
+
+
         $this->twig = $twig;
     }
 
