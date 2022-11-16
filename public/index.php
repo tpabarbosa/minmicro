@@ -31,11 +31,20 @@ $dotenv->safeLoad();
         $page->render();
     });
 
-    $router->get("/assets(/.*)", function ($file) use ($twig, $locale, $config) {
-        if (is_file(__DIR__ . "/../tmp/assets/{$file}")) {
-            echo file_get_contents($file);
+    $router->get("/assets(/.*.(css|js))", function ($file, $type) use ($twig, $locale, $config) {
+        $filename = __DIR__ . "/../tmp/assets/{$file}{$type}";
+        $fileType = $type === 'js' ? 'text/javascript' : 'text/css';
+        if (is_file($filename)) {
+            // file_get_contents($filename);
+            $fd = fopen($filename, 'rb');
+            ob_clean();
+            header('Content-Type:' . $fileType);
+            while (!feof($fd)) {
+                echo fread($fd, 1048576);
+                ob_flush();
+            }
+            fclose($fd);
         } else {
-            echo '' ;
             $notFound = new Error('pt', $twig, $locale, $config);
             $notFound->render();
         }
