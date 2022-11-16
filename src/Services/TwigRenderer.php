@@ -11,8 +11,8 @@ class TwigRenderer
 {
     protected $twig;
 
-    const CACHE_PATH = '/tmp';//__DIR__ . '/../../tmp';
-    const TWIG_PUBLIC_PATH = '/tmp';//__DIR__ . '/../../public/assets';
+    const CACHE_PATH = __DIR__ . '/../../tmp';//'/tmp';//
+    const TWIG_PUBLIC_PATH = __DIR__ . '/../../tmp/assets';//'/tmp';//__DIR__ . '/../../public/assets';
     const TWIG_TEMPLATES_PATH = __DIR__ . '/../../templates';
     private $DEVELOPMENT_MODE;
 
@@ -70,7 +70,7 @@ class TwigRenderer
     private function getTwigOptions()
     {
         return [
-            'debug' => $this->DEVELOPMENT_MODE,
+            'debug' => !!$this->DEVELOPMENT_MODE,
             'auto-reload' => true,
             'cache' => !$this->DEVELOPMENT_MODE ? self::CACHE_PATH : false,
         ];
@@ -84,7 +84,7 @@ class TwigRenderer
             'url_base_path' => $this->baseUrl . '/assets/',
             'cache_path' => self::CACHE_PATH,
             'cache_name' => 'cache-assets',
-            'cache_lifetime' => -1,
+            'cache_lifetime' => 0,
             'minify' => !$this->DEVELOPMENT_MODE
         ];
     }
