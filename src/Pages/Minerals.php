@@ -86,7 +86,6 @@ class Minerals extends AbstractPage
                         'linkUrl' => $linkUrl . '#' . $alias,
                     ];
                 }
-
             } else {
                 $list = $minerals;
                 if (isset($list[$alias])) {
