@@ -12,7 +12,7 @@ class TwigRenderer
     protected $twig;
 
     const CACHE_PATH = '/tmp';//__DIR__ . '/../../tmp';//
-    const TWIG_PUBLIC_PATH = '/tmp';//__DIR__ . '/../../tmp/assets';//__DIR__ . '/../../public/assets';
+    const TWIG_PUBLIC_PATH = '/tmp/assets';//__DIR__ . '/../../tmp/assets';//__DIR__ . '/../../public/assets';
     const TWIG_TEMPLATES_PATH = __DIR__ . '/../../templates';
     private $DEVELOPMENT_MODE;
 
@@ -24,6 +24,13 @@ class TwigRenderer
         // self::clearCache();
         $this->DEVELOPMENT_MODE = $mode;
         $this->baseUrl = $baseUrl;
+
+        if (!is_dir('/tmp')) {
+            mkdir('/tmp');
+        }
+        if (!is_dir('/tmp/assets')) {
+            mkdir('/tmp/assets');
+        }
 
         $loader = new \Twig\Loader\FilesystemLoader(self::TWIG_TEMPLATES_PATH);
         $twig = new \Twig\Environment($loader, $this->getTwigOptions());
