@@ -19,21 +19,21 @@ class MdContent extends AbstractPage
 
     public function render($route = null, $lang = null)
     {
-        var_dump($route);
-        var_dump($lang);
+        //var_dump($route);
+        //var_dump($lang);
         if (!is_string($route)) {
             $route = array_filter($route);
-            var_dump($route);
+            //var_dump($route);
             $route = join('/', $route);
         }
 
         $this->route = $route;
 
         $minerals = $this->locale->getText('route.minerals');
-        var_dump($route);
-        var_dump("{$minerals}(\/[A-Z])?");
+        //var_dump($route);
+        //var_dump("{$minerals}(\/[A-Z])?");
         preg_match("/^{$minerals}(\/[A-Z])?$/", $route, $matches);
-        var_dump($matches);die();
+       // var_dump($matches);
         if (isset($matches[1]) && $matches[1]) {
             $page = new Minerals($this->langAlias, $this->twig, $this->locale, $this->config);
             $page->render($matches[1]);

@@ -54,15 +54,15 @@ $dotenv->safeLoad();
 
     // Rotas Minerais
     $router->get("/{$test}(/[A-Z])?", function ($letter) use ($twig, $locale, $config) {
-        var_dump($letter);
-        var_dump($_SERVER);
+        //var_dump($letter);
+        //var_dump($_SERVER);
         $page = new Minerals('pt', $twig, $locale, $config);
         $page->render($letter);
     });
 
     $router->get("/({$localeRegex})/({$minerals})(/[A-Z])?", function ($lang, $route, $letter) use ($twig, $locale, $config) {
-        var_dump($letter);
-        var_dump($_SERVER);
+        //var_dump($letter);
+        //var_dump($_SERVER);
         $page = new Minerals($lang, $twig, $locale, $config);
         $page->render($letter);
     });
@@ -70,15 +70,15 @@ $dotenv->safeLoad();
 
     // Rotas Conteúdo Personalizado (Articles)
     $router->get("/({$localeRegex})/(([0-9A-Za-z-]+\/?)+)", function ($lang, ...$file) use ($twig, $locale, $config) {
-        var_dump($file);
-        var_dump($_SERVER);
+        //var_dump($file);
+        //var_dump($_SERVER);
         $page = new MdContent($lang, $twig, $locale, $config);
         $page->render($file, $lang);
     });
 
     $router->get('/(([0-9A-Za-z-]+\/?)+)', function (...$file) use ($twig, $locale, $config) {
-        var_dump($file);
-        var_dump($_SERVER);
+        //var_dump($file);
+        //var_dump($_SERVER);
         $page = new MdContent('pt', $twig, $locale, $config);
         $page->render($file, 'pt');
     });

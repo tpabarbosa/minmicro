@@ -388,11 +388,11 @@ class Router
     */
     private function patternMatches($pattern, $uri, &$matches, $flags)
     {
-        var_dump("URI: ", $uri);
+        //var_dump("URI: ", $uri);
       // Replace all curly braces matches {} into word patterns (like Laravel)
       $pattern = preg_replace('/\/{(.*?)}/', '/(.*?)', $pattern);
-        var_dump("PADRAO: ", $pattern);
-        var_dump("PREG_MATCH_ALL: ", preg_match_all('#^' . $pattern . '$#', $uri, $matches, PREG_OFFSET_CAPTURE));
+        //var_dump("PADRAO: ", $pattern);
+        //var_dump("PREG_MATCH_ALL: ", preg_match_all('#^' . $pattern . '$#', $uri, $matches, PREG_OFFSET_CAPTURE));
       // we may have a match!
       return boolval(preg_match_all('#^' . $pattern . '$#', $uri, $matches, PREG_OFFSET_CAPTURE));
     }
@@ -418,7 +418,7 @@ class Router
 
             // get routing matches
             $is_match = $this->patternMatches($route['pattern'], $uri, $matches, PREG_OFFSET_CAPTURE);
-            var_dump("MATCHES: ", $matches);
+            //var_dump("MATCHES: ", $matches);
             // is there a valid match?
             if ($is_match) {
 
@@ -438,7 +438,7 @@ class Router
                     return isset($match[0][0]) && $match[0][1] != -1 ? trim($match[0][0], '/') : null;
                 }, $matches, array_keys($matches));
 
-                var_dump("PARAMS: ", $params);
+                //var_dump("PARAMS: ", $params);
                 // Call the handling function with the URL parameters if the desired input is callable
                 $this->invoke($route['fn'], $params);
 
