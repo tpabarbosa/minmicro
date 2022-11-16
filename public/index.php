@@ -67,11 +67,13 @@ $dotenv->safeLoad();
 
     // Rotas Conteúdo Personalizado (Articles)
     $router->get("/({$localeRegex})/(([0-9A-Za-z-]+\/?)+)", function ($lang, ...$file) use ($twig, $locale, $config) {
+        var_dump($_SERVER); die();
         $page = new MdContent($lang, $twig, $locale, $config);
         $page->render($file, $lang);
     });
 
     $router->get('/(([0-9A-Za-z-]+\/?)+)', function (...$file) use ($twig, $locale, $config) {
+        var_dump($_SERVER); die();
         $page = new MdContent('pt', $twig, $locale, $config);
         $page->render($file, 'pt');
     });
