@@ -28,10 +28,14 @@ class TwigRenderer
 
         $twig->addExtension(new TwigAssetsExtension($twig, $this->getAssetsOptions()));
         $twig->addExtension(new DebugExtension());
-
+        // var_dump($twig->getFilters());
         $this->twig = $twig;
     }
 
+    public function getFilters()
+    {
+        return $this->twig->getFilters();
+    }
     // private static function clearCache()
     // {
     //     try {
