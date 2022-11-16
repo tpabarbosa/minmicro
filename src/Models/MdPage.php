@@ -2,8 +2,7 @@
 
 namespace MinMicro\Models;
 
-use ParsedownExtra;
-use ParsedownExtraPlugin;
+use MinMicro\Services\ParsedownExtra;
 
 class MdPage extends AbstractModel
 {
