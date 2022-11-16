@@ -47,7 +47,7 @@
     
     {{ include('layout/footer.twig') }}
 
-    <script src="http://192.168.0.161:8084/assets/main.js"></script>
+    <script src="{{ site.baseUrl }}/assets/main.js"></script>
     
     {{ call_assets_if_it_exists('assets',  {
         files: [
