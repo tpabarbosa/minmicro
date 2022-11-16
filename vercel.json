@@ -4,17 +4,15 @@
         { "src": "api/index.php", "use": "vercel-php@0.5.2" },
         { "src": "/public/**", "use": "@vercel/static" }
     ],
-    "rewrites": [
+    "routes": [
         {
-            "source": "/assets/:match*",
-            "destination": "/public/assets/:match*"
+            "src": "/assets/(.*)",
+            "dest": "/public/assets/$1"
         },
         {
-            "source": "/images/:match*",
-            "destination": "/public/images/:match*"
-        }
-    ],
-    "routes": [
+            "src": "/images/(.*)",
+            "dest": "/public/images/$1"
+        },
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
