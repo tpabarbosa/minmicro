@@ -23,9 +23,11 @@ $dotenv->safeLoad();
 
     $localeRegex = $locale->getLocaleRegex();
     $minerals = $locale->getRegex('route.minerals');
-
+    $test = $locale->getTranslation('route.minerals', 'pt-BR');
     // Rotas Home
     $router->setNamespace('\MinMicro\Pages');
+
+    $router->setBasePath('/');
     $router->get("/({$localeRegex})?", function ($lang) use ($twig, $locale, $config) {
         $page = new Home($lang, $twig, $locale, $config);
         $page->render();
@@ -33,11 +35,8 @@ $dotenv->safeLoad();
 
     $router->get("/assets(/.*.(css|js))", function ($file, $type) use ($twig, $locale, $config) {
         $filename = __DIR__ . "/../tmp/assets/{$file}{$type}";
-        var_dump($filename);
         $fileType = $type === 'js' ? 'text/javascript' : 'text/css';
-        var_dump($fileType);
         if (is_file($filename)) {
-            var_dump(file_get_contents($filename));
             $fd = fopen($filename, 'rb');
             ob_clean();
             header('Content-Type:' . $fileType);
@@ -54,12 +53,16 @@ $dotenv->safeLoad();
     });
 
     // Rotas Minerais
-    $router->get("/{$locale->getTranslation('route.minerals', 'pt-BR')}(/[A-Z])?", function ($letter) use ($twig, $locale, $config) {
+    $router->get("/{$test}(/[A-Z])?", function ($letter) use ($twig, $locale, $config) {
+        //var_dump($letter);
+        //var_dump($_SERVER);
         $page = new Minerals('pt', $twig, $locale, $config);
         $page->render($letter);
     });
 
     $router->get("/({$localeRegex})/({$minerals})(/[A-Z])?", function ($lang, $route, $letter) use ($twig, $locale, $config) {
+        //var_dump($letter);
+        //var_dump($_SERVER);
         $page = new Minerals($lang, $twig, $locale, $config);
         $page->render($letter);
     });
@@ -67,11 +70,15 @@ $dotenv->safeLoad();
 
     // Rotas Conteúdo Personalizado (Articles)
     $router->get("/({$localeRegex})/(([0-9A-Za-z-]+\/?)+)", function ($lang, ...$file) use ($twig, $locale, $config) {
+        //var_dump($file);
+        //var_dump($_SERVER);
         $page = new MdContent($lang, $twig, $locale, $config);
         $page->render($file, $lang);
     });
 
     $router->get('/(([0-9A-Za-z-]+\/?)+)', function (...$file) use ($twig, $locale, $config) {
+        //var_dump($file);
+        //var_dump($_SERVER);
         $page = new MdContent('pt', $twig, $locale, $config);
         $page->render($file, 'pt');
     });
