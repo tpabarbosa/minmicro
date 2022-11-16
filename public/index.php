@@ -31,6 +31,16 @@ $dotenv->safeLoad();
         $page->render();
     });
 
+    $router->get("/assets(/.*))", function ($file) use ($twig, $locale, $config) {
+        if (is_file(__DIR__ . "/../tmp/assets/{$file}")) {
+            echo file_get_contents($file);
+        } else {
+            echo '' ;
+            $notFound = new Error('pt', $twig, $locale, $config);
+            $notFound->render();
+        }
+    });
+
     // Rotas Minerais
     $router->get("/{$locale->getTranslation('route.minerals', 'pt-BR')}(/\w)?", function ($letter) use ($twig, $locale, $config) {
         $page = new Minerals('pt', $twig, $locale, $config);
