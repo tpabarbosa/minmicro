@@ -19,9 +19,11 @@ class MdContent extends AbstractPage
 
     public function render($route = null, $lang = null)
     {
-
+        var_dump($route);
+        var_dump($lang);
         if (!is_string($route)) {
             $route = array_filter($route);
+            var_dump($route);
             $route = join('/', $route);
         }
 
