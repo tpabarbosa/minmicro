@@ -25,18 +25,19 @@ class TwigRenderer
         $this->DEVELOPMENT_MODE = $mode;
         $this->baseUrl = $baseUrl;
 
-        if (!is_dir(self::CACHE_PATH)) {
-            mkdir(self::CACHE_PATH);
-        }
-        if (!is_dir(self::TWIG_PUBLIC_PATH)) {
-            mkdir(self::TWIG_PUBLIC_PATH);
-        }
-
         $loader = new \Twig\Loader\FilesystemLoader(self::TWIG_TEMPLATES_PATH);
         $twig = new \Twig\Environment($loader, $this->getTwigOptions());
 
 
         if ($this->DEVELOPMENT_MODE) {
+            if (!is_dir(self::CACHE_PATH)) {
+                mkdir(self::CACHE_PATH);
+            }
+            if (!is_dir(self::TWIG_PUBLIC_PATH)) {
+                mkdir(self::TWIG_PUBLIC_PATH);
+            }
+
+
             $twig->addExtension(new TwigAssetsExtension($twig, $this->getAssetsOptions()));
             $twig->addExtension(new DebugExtension());
         }
