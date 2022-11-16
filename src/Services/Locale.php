@@ -94,7 +94,12 @@ class Locale
         }
 
         $this->current = $name;
-        \Locale::setDefault($this->current);
+        try {
+            \Locale::setDefault($this->current);
+        } catch (\Exception $e) {
+
+        }
+
         return $this;
     }
 
