@@ -1,12 +1,12 @@
 <?php
 
-use Bramus\Router\Router;
 use Dotenv\Dotenv;
 use MinMicro\Pages\Error;
 use MinMicro\Pages\Home;
 use MinMicro\Pages\MdContent;
 use MinMicro\Pages\Minerals;
 use MinMicro\Services\Locale;
+use MinMicro\Services\Router;
 use MinMicro\Services\TwigRenderer;
 
 require_once __DIR__ . '/../vendor/autoload.php';
