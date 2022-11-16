@@ -104,12 +104,8 @@
         {% endif %}
         
         <a href="{{ link.url }}" class='link-card-title'> {{ link.text }} </a>
-        {% if has_format_date %}
-        <p class='link-card-date'>{{ link.page.updatedAt|format_date }}</p>
-        {% else %}
-        <p class='link-card-date'>{{ link.page.updatedAt|date }}</p>
-        {% endif %}
-        
+
+        <p class='link-card-date'>{{ call_filter_if_it_exists(link.page.updatedAt|date,"format_date") }}</p>
         
         <p class='link-card-excerpt'>{{ link.page.excerpt }}</p>
         <a href="{{ link.url }}" class="link-card-button"> continuar</a>

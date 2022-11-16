@@ -3,7 +3,9 @@
 namespace MinMicro\Services;
 
 use Odan\Twig\TwigAssetsExtension;
+use Twig\Environment;
 use Twig\Extension\DebugExtension;
+use Twig\TwigFunction;
 
 class TwigRenderer
 {
@@ -28,7 +30,15 @@ class TwigRenderer
 
         $twig->addExtension(new TwigAssetsExtension($twig, $this->getAssetsOptions()));
         $twig->addExtension(new DebugExtension());
-        // var_dump($twig->getFilters());
+        $twig->addFunction(new TwigFunction('call_filter_if_it_exists', function ($env, $input, $filter, ...$args) {
+            $filter = $env->getFilter($filter);
+
+            if (!$filter) {
+                return $input;
+            }
+
+            return $filter->getCallable()($env, $input, ...$args);
+        }, ['needs_environment' => true]));
         $this->twig = $twig;
     }
 

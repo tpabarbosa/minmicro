@@ -17,10 +17,8 @@ class Home extends AbstractPage
         $data = [
             'alphabeticNav' => new AlphabeticNav($this->locale),
             'links' => $this->linksToView($this->config['HOME_PAGE_LINKS']),
-            $data['has_format_date'] = isset($this->twig->getFilters()['format_date'])
         ];
-        // var_dump($data);
-        // die();
+
         $this->view(self::TEMPLATE, $data);
     }
 

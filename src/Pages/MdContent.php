@@ -33,7 +33,6 @@ class MdContent extends AbstractPage
             $mdCategory = new MdCategory($fileFullPath, false);
 
             $data['links'] = $this->parseLinks($mdCategory);
-            $data['has_format_date'] = isset($this->twig->getFilters()['format_date']);
 
             $this->mdPage = $mdCategory->page;
         } elseif (is_file($fileFullPath . '.md')) {
