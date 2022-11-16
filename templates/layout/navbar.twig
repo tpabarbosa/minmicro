@@ -1,0 +1,29 @@
+
+{# variables:
+    site.baseUrl
+    site.logoUrl
+    site.name
+    site.navbarLinks: array of objects with properties:
+        url
+        text
+        active
+        icon: fa-*
+#}
+
+<nav id="navbar">
+    <div id="navbar-logo-container">
+        <a id="navbar-logo-link" href="{{ site.baseUrl }}"><img src="{{ site.logoUrl }}" alt={{ site.name }}/></a>
+        <p>{{ site.name }}</p>
+        
+    </div>
+    <div id="darken-background"></div>
+    <ul id="navbar-items">
+        {% for item in site.navbarLinks %}
+            <li class="navbar-item-container">
+                <a href="{{ item.url }}" class="navbar-item">{{ item.text }}</a>
+            </li>
+        {% endfor %}
+        {{ include('layout/lang-menu.twig') }}
+    </ul>
+    <button id="navbar-toggler"><i class="fa fa-bars"></i></button>
+</nav>

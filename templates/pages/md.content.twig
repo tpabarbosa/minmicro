@@ -1,0 +1,140 @@
+{% extends "layout/main.twig" %}
+
+
+
+{% block content %}
+
+<style>
+    .content-block {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        font-weight: 400;
+    }
+
+    .content-block p {
+        margin: 1.5rem 0;
+    }
+
+    .content-block a {
+        color: var(--color-link);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .content-block a:hover {
+        background-color: var(--color-mark);
+    }
+
+    .content-block li p {
+        display: inline;
+    }
+
+    .content-block h2 {
+        margin: 2rem 0;
+        line-height: 2.3rem;
+    }
+
+    .content-block h3 {
+        margin: 2rem 0 1rem 0;
+    }
+
+    .content-block h4, h5 {
+        margin: 1rem 0;
+    }
+
+    .content-block img {
+        display: block;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+        max-width:100%;
+    }
+
+    .content-block blockquote {
+        background: none;
+        border-left: 3px solid var(--color-secondary-dark);
+        background-color: var(--color-secondary-light);
+        margin: 1.5rem 5%;
+        padding: 1rem;
+        }
+
+    .content-block li {
+        margin: 2rem 0;
+    }
+
+    .content-block li > ul > li, .content-block li > ol > li {
+        margin: 1rem 0;
+    }
+
+    .content-block ul, .content-block ol{
+        margin-left: 2rem;
+    }
+
+    .content-block table {
+        border-collapse: collapse;
+        margin: 1.5rem auto;
+    }
+
+    .content-block thead {
+        font-size: 1.2rem;
+    }
+
+    .content-block tbody {
+        font-size: 1rem;
+    }
+
+    .content-block td, .content-block th {
+        border: 1px solid var(--color-border);
+    }
+
+    .content-block td, .content-block th {
+        padding: 0.5rem 1rem;
+        margin: 1rem;
+    }
+
+    .content-block .centered {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .content-block .button {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: var(--btn-accent-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 3px;
+        text-decoration: none;
+        color: var(--btn-accent-label);
+        font-size: 1.2rem;
+        font-weight: 400;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .content-block .button:hover {
+        background-color: var(--btn-accent-hover);
+        color: var(--btn-accent-label-hover);
+    }
+
+
+</style>
+
+{% if links.categories %}
+<div class="">
+    {{ include('components/categories.nav.twig') }}
+</div>
+{% endif %}
+<div id="content">
+
+    {% if content %}
+    <div class="content-block">
+        {% autoescape false %}
+        {{ content|raw }}
+        {% endautoescape %}
+    </div>
+    {% endif %}
+    {% if links.pages %}
+    <div class="">
+        {{ include('components/links.nav.twig') }}
+    </div>
+    {% endif %}
+    
+</div>
+{% endblock %}

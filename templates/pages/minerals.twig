@@ -1,0 +1,273 @@
+{% extends "layout/main.twig" %}
+
+{% block content %}
+<style>
+    .important {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .minerals {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .mineral-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        margin: 1.5rem 0;
+        background: var(--color-primary-light);
+        width: 100%;
+        box-shadow: 0px 0px 8px 4px var(--color-shadow);
+    }
+
+    .mineral-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .mineral-card h4 {
+        font-size: 1.2rem;
+    }
+
+    .mineral-card-top {
+        display: flex;
+        flex-wrap: wrap;
+        text-decoration: none;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .mineral-card-data {
+        text-align: center;
+        color:var(--color-link);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .mineral-card-top img {
+        width: 100px;
+        height: 100px;
+        border-radius:50%;
+    }
+
+    .mineral-card-top-data:hover {
+        background: var(--color-mark);
+    }
+
+    .mineral-card-top h3 {
+        margin: 0.2rem 0;
+    }
+
+    .mineral-card-top h4 {
+        margin: 0.2rem 0;
+        color: var(--color-secondary-dark);
+    }
+
+    .mineral-card-bottom h4 {
+        padding: 0.5rem 0;
+    }
+
+
+    .mineral-card-top h5 {
+        font-size: 1.0rem;
+        margin: 0.5rem 0;
+    }
+
+    .mineral-card-data {
+        padding: 0.5rem 1rem;
+    }
+
+    .mineral-card-bottom {
+        flex-grow: 1;
+        width: 100%;
+        margin-top: 1.5rem;
+        border-top: 2px solid var(--color-border);
+        align-items: center;
+    }
+
+    .mineral-card-bottom-videos {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .mineral-card-bottom-videos a {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        height: 90px;
+        margin: 0.5rem;
+    }
+
+
+    .mineral-card-bottom-videos i {
+        position: absolute;
+        width: 120px;
+        height: 80px;
+        text-align: center;
+        top: 5px;
+        color: #b50001;
+    }
+
+    .mineral-card-bottom-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .mineral-card-bottom-link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .mineral-card-bottom-links i, .mineral-card-bottom-links a {
+        color: var(--color-link);
+        margin: 0.2rem 0;
+        padding: 0.2rem;
+    }
+
+    .mineral-card-bottom-links a:hover {
+        background-color: var(--color-mark);
+    }
+
+    .mineral-card-bottom-links a {
+        color: var(--color-link);
+        text-decoration: none;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .mineral-card-bottom-videos .icon {
+        position: absolute;
+        background: #fff;
+        top: 25px;
+        left: 30px;
+        width: 60px;
+        height: 40px;
+    }
+
+    .mineral-card-bottom-videos .bg {
+        position: absolute;
+        background: #000; 
+        width: 120px;
+        height: 90px;   
+        opacity: 0.5;
+    }
+
+    .mineral-card-bottom-videos img {
+        width: 120px;
+        height: 90px;
+        border: 2px solid var(--color-border);
+    }
+
+    
+    @media only screen and (min-width: 535px) {
+        .minerals {
+            flex-direction: row;
+        }
+        .mineral-card {
+            
+            max-width: calc(100% / 2.2);
+        }
+    }
+
+    @media only screen and (min-width: 758px) {
+        .mineral-card {
+            min-width: calc(100% / 3.3);
+        }
+    }
+
+    .mineral-name {
+        position: relative;
+        top: -5rem;
+    }
+
+</style>
+
+<div id="content">
+    
+    {% if minerals %}
+    <div class="minerals">
+        {% for mineral in minerals %}
+        
+            <div class="mineral-card" >
+                <div id="{{ mineral.name }}" class="mineral-name"></div>
+                {% if mineral.pdfUrl %}
+                <a href="{{ mineral.pdfUrl }}" target="_blank" class="mineral-card-top">
+                {% else %}
+                <div class="mineral-card-top">
+                {% endif %}
+                
+                    <img src="{{ mineral.thumbnail }}" onerror="this.style.display='none'"/>
+                    <div class="mineral-card-data">
+                        <h3>{{ mineral.name }}</h3>
+                        <h4>{{ mineral.group }}</h4>
+                        <h5>{{ mineral.formula|raw }}</h5>
+                        {# <i class="fa fa-file-pdf-o fa-2x"></i> #}
+                        
+                    </div>
+
+                {% if mineral.pdfUrl %}
+                </a>
+                {% else %}
+                </div>
+                {% endif %}
+                    
+
+                {% if mineral.seeAlso %}
+                
+                <div class="mineral-card-bottom">
+                    <h4>{{ See }}</h4>
+                    <div class="mineral-card-bottom-links">
+                    {% for alias in mineral.seeAlso %}
+                        <div class="mineral-card-bottom-link">
+                            <a href="{{ alias.pdfUrl }}" target="__blank" >
+                                <i class="fa fa-file-pdf-o fa-2x"></i>
+                            </a>
+                            <a href="{{ alias.linkUrl }}">
+                                {{ alias.name }}
+                            </a>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if mineral.youtube %}
+                <div class="mineral-card-bottom">
+                    <h4>{{ Videos }}</h4>
+                    <div class="mineral-card-bottom-videos">
+                    {% for video in mineral.youtube %}
+                        <a href="https://www.youtube.com/watch?v={{ video }}">
+                            <div class="bg"></div>
+                            <div class="icon"></div>
+                            <i class="fa fa-youtube-play fa-5x"></i>
+                            
+                            <img src="https://img.youtube.com/vi/{{ video }}/default.jpg" onerror="this.style.display='none'"/>
+                        </a>
+                    {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+        
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div class="content-block">
+        {{ include('components/alphabetic.nav.twig') }}
+    </div>
+
+</div>
+    
+{% endblock %}

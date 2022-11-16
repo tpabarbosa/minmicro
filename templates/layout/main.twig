@@ -1,0 +1,58 @@
+{# variables:
+    page.langAlias
+    page.title
+    page.description
+    page.keywords
+#}
+
+<!DOCTYPE html>
+<html lang="{{ page.langAlias }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ page.keywords }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link 
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
+    />
+    
+    {{ assets({
+        files: [
+            'layout/_colors.css',
+            'layout/main.css',
+            'layout/navbar.css',
+            'layout/lang-menu.css',
+            'layout/footer.css',
+            'layout/header.css',
+            'layout/breadcrumb.css',
+            ], 
+        name: 'main.css'
+    }) }}
+
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    {{ include('layout/navbar.twig') }}
+
+    {{ include('layout/header.twig') }}
+    
+    <main>{% block content %}{% endblock %}</main>
+    
+    {{ include('layout/footer.twig') }}
+
+    {{ assets({
+        files: [
+            'layout/navbar.js',
+            ], 
+        name: 'main.js'
+    }) }}
+
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

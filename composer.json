@@ -1,0 +1,17 @@
+{
+    "require": {
+        "twig/twig": "^3.0",
+        "odan/twig-assets": "^3.2",
+        "bramus/router": "~1.6",
+        "erusev/parsedown": "^1.7",
+        "erusev/parsedown-extra": "^0.8.1",
+        "symfony/intl": "^5.4",
+        "twig/intl-extra": "^3.4",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MinMicro\\": "src/"
+        }
+    }
+}

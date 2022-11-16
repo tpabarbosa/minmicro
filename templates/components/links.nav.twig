@@ -1,0 +1,113 @@
+<style>
+    .link-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .link-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--color-primary-light);
+        width: 100%;
+        margin: 1rem 0;
+        box-shadow: 0px 0px 8px 4px var(--color-shadow);
+        /* border-radius: 0 0 20px 20px; */
+        overflow: hidden;
+    }
+
+    .link-card img {
+        width: 100%;
+        display: block;
+    }
+
+    .link-card-image-container {
+        max-height: 200px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .link-card-title {
+        padding: 1rem 0.5rem;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: var(--color-text-heading);
+        font-weight: bold;
+        align-self: flex-start;
+        border-left: 4px solid var(--color-accent);
+        margin: 0.5rem auto;
+        width: 95%;
+        background-color: var(--color-accent-bg);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .link-card-title:hover {
+        background-color: var(--color-accent-light);
+    }
+
+    .link-card-date {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        font-style: italic;
+        align-self: flex-end;
+    }
+
+    .link-card-excerpt {
+        padding: 0.5rem;
+        
+    }
+
+    .link-card-button {
+        align-self: flex-end;
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: var(--color-link);
+        transition: all 0.5s ease;
+        border-radius: 5px;
+        margin-right: 1rem;
+    }
+
+    .link-card-footer {
+        flex-grow: 1;
+    }
+
+    .link-card-button:hover {
+        background-color: var(--color-mark);
+    }
+
+    @media only screen and (min-width: 535px) {
+        .link-card {
+            max-width: calc(100% / 2.2);
+        }
+    }
+
+    @media only screen and (min-width: 758px) {
+        .link-card {
+            min-width: calc(100% / 3.3);
+        }
+    }
+</style>
+
+<div class="link-card-container">
+    {% for link in links.pages %}
+    <div class="link-card">
+
+        {% if link.page.linkImageUrl %}
+        <div class="link-card-image-container">
+            <img src="{{ link.page.linkImageUrl }}" alt="{{ link.page.linkImageAlt }}"/>
+        </div>
+        {% endif %}
+        
+        <a href="{{ link.url }}" class='link-card-title'> {{ link.text }} </a>
+        <p class='link-card-date'>{{ link.page.updatedAt|format_date }}</p>
+        <p class='link-card-excerpt'>{{ link.page.excerpt }}</p>
+        <a href="{{ link.url }}" class="link-card-button"> continuar</a>
+        <p class="link-card-footer"></p>
+    </div>
+    {% endfor %}
+</div>

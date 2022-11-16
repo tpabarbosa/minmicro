@@ -1,0 +1,14 @@
+<div class="lang-menu">
+    <li class="selected-lang navbar-item-container {{ site.langAlias }}">
+        {{ site.langName }}
+    </li>
+    <ul>
+        {% for lang, info in translatedUrls %}
+            {% if site.langAlias != lang and info.url %}
+            <li>
+                <a href="{{ info.url }}" class="{{ lang }}">{{ info.name }}</a>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>

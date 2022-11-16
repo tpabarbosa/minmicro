@@ -1,0 +1,64 @@
+<style>
+
+    #categories-nav h2 {
+        display: inline-block;
+        padding-left: 0.5rem;
+        font-size: 1.2rem;
+    }
+    #categories-nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background: var(--color-secondary);
+        flex-wrap: wrap;
+        padding: 0.5rem 5%;
+    }
+
+    #categories-nav li {
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        margin: 0 0.5rem;
+    }
+
+    #categories-nav img {
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid;
+    }
+
+    #categories-nav a {
+        text-decoration: none;
+        background: var(--btn-secondary-bg);
+        color: var(--btn-secondary-label);
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+
+    }
+
+    #categories-nav a:hover {
+        background-color: var(--btn-secondary-hover) !important;
+        color: var(--btn-secondary-label-hover);
+    }
+</style>
+
+
+<nav id="categories-nav">
+    <ul>
+        {# <h2>{{ Categories }}: </h2> #}
+        {% for link in links.categories %}
+        <li>
+            {% if link.page.image %}
+            <img src="{{ link.page.image }}" alt="{{ link.page.imageAlt }}" width="100%" height="100%">
+            {% endif %}
+            
+            <a href="{{ link.url }}">{{ link.text }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
+    

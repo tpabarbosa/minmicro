@@ -1,0 +1,41 @@
+{% extends "layout/main.twig" %}
+
+
+
+{% block content %}
+<style>
+    .important {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* #content {
+        padding: 1rem;
+        max-width: 900px;
+        width: 90%;
+        margin: 2rem auto;
+        border: 1px dashed;
+        background: white;
+    } */
+</style>
+
+
+{% if links.categories %}
+<div class="">
+    {{ include('components/categories.nav.twig') }}
+</div>
+{% endif %}
+<div id="content">
+    <div class="content-block">
+        {{ include('components/alphabetic.nav.twig') }}
+    </div>
+    {% if links.pages %}
+    <div class="">
+        {{ include('components/links.nav.twig') }}
+    </div>
+    {% endif %}
+</div> 
+
+
+    
+{% endblock %}

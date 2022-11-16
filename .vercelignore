@@ -1,0 +1,11 @@
+# PHP
+/vendor
+
+# Vercel
+.vercel
+
+#
+.logs
+.project
+.vscode
+.env

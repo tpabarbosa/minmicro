@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    flex-grow: 1;
+}
+
+#content {
+    max-width: 900px;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.content-block {
+    margin: 2rem 0;
+    padding: 1rem;
+    width: 100%;
+    border: 1px dashed;
+    background: var(--color-primary-light);
+}

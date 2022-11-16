@@ -1,0 +1,32 @@
+{# variables:
+
+    header.breadcrumbLinks: array of objects with properties:
+        url
+        text
+        active
+        icon: fa-*
+    header.title: object with properties:
+        style
+        imageUrl
+        imageAlt
+        text
+#}
+
+<header id="layout-header">
+    {% if header.breadcrumbLinks %}
+        {{ include('layout/breadcrumb.twig') }}
+    {% endif %}
+    
+    {% if header.style != 'none' %}
+        <div id="header-title" class="header-style-{{ header.style }}">
+            {% if header.text %}
+                <div id="header-text">
+                    <h1>{{ header.text }}</h1>
+                </div>
+            {% endif %}
+            {% if header.imageUrl %}
+            <img id="header-image" src="{{ header.imageUrl }}" alt="{{ header.imageAlt }}"/>
+            {% endif %}
+        </div>
+    {% endif %}
+</header>

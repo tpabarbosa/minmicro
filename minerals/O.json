@@ -1,0 +1,28 @@
+{
+    "Ortoclásio": {
+        "en": {
+            "name": "Ortoclasio",
+            "group": "Tectosilicate"
+        },
+        "pt": {
+            "name": "Ortoclásio",
+            "group": "Tectosilicato"
+        },
+        "see-also": [],
+        "formula": "KAlSi<sub>3</sub>O<sub>8</sub>",
+        "youtube": []
+    },
+    "Ouro": {
+        "en": {
+            "name": "Gold",
+            "group": "Native element"
+        },
+        "pt": {
+            "name": "Ouro",
+            "group": "Elemento nativo"
+        },
+        "see-also": [],
+        "formula": "Au",
+        "youtube": []
+    }
+}

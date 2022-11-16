@@ -1,0 +1,54 @@
+<style>
+    #alphabet-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    #alphabet-nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    #alphabet-nav li {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #alphabet-nav a {
+        width: 100%;
+        border: 1px solid var(--color-border);
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        box-shadow: 2px 2px 1px 0px var(--color-shadow);
+        background-color: var(--btn-secondary-bg);
+        color: var(--btn-secondary-label);
+        border-radius: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #alphabet-nav a:hover {
+        background-color: var(--color-secondary-dark) !important;
+        color: var(--btn-secondary-label-hover);
+    }
+
+</style>
+
+<h2>{{ alphabeticNav.subtitle }}</h2>
+<nav id="alphabet-nav">
+    <ul>
+        {% for letter in range('A', 'Z') %}
+            
+        <li><a href="{{ alphabeticNav.folder }}/{{ letter }}">{{ letter }}</a></li>
+
+        {% endfor %}
+    </ul>
+</nav>

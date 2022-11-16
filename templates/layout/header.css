@@ -1,0 +1,117 @@
+#layout-header {
+    background-color: var(--color-accent-dark);
+    margin-top: 3rem;
+}
+
+#header-title {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 12rem;
+    position: relative;
+}
+
+#header-title.header-style-small {
+    height: 7rem;
+    min-height: 7rem;
+    overflow: hidden;
+}
+
+#header-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+    top: 0rem;
+    z-index: 0;
+}
+
+#header-text {
+    max-width: 800px;
+    text-align: center;
+    color: var(--color-text-heading-accent);
+    background-color: var(--color-primary-bg);
+    padding: 1rem 2rem;
+    position: absolute;
+    display: block;
+    top: 1rem;
+    left: 0;
+    box-shadow: 0 8px 32px 0 var(--color-shadow);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid var(--color-primary-bg);
+}
+
+#header-text h1 {
+    text-align: left;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+
+
+@media only screen and (min-width: 366px) {
+    #header-text {
+        top: 1rem;
+    }
+
+    #header-text h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media only screen and (min-width: 535px) {
+    #header-title {
+        max-height: 20rem;
+        min-height: 20rem;
+        overflow: hidden;
+    }
+
+    #header-text {
+        top: 4rem;
+    }
+
+    #header-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #layout-header .open {
+        display: flex;
+        flex-direction: row;
+        visibility: visible;
+        height: auto;
+        max-height: 50rem;
+        position: unset;
+        width: auto;
+    }
+
+    #header-title.header-style-small {
+        min-height: 9rem;
+    }
+
+    #header-text {
+        top: 4rem;
+        max-width: 900px;
+        padding-left: calc(((100vw - 900px)/2) + 1rem + 50px);
+    }
+
+    #header-text h1 {
+        font-size: 3.5rem;
+    }
+
+    
+}
+
+@media only screen and (min-width: 1330px) {
+    #header-text {
+        top: 4rem;
+        max-width: 1100px;
+        padding-left: calc(((100vw - 1000px)/2) + 1rem + 100px);
+    }
+
+}
+
+#header-title.header-style-small #header-text {
+    top: 1rem;
+}

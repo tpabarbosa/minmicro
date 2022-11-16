@@ -1,0 +1,14 @@
+<nav id="header-breadcrumb">
+    <ul id="header-breadcrumb-items">
+        {% for item in header.breadcrumbLinks %}
+        <li class="header-breadcrumb-item">
+            {% if item.url %}
+                <a href="{{ item.url }}"> {{ item.text }}</a> <span>::&nbsp;</span>
+            {% endif %}
+            {% if not item.url %}
+                {{ item.text }}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

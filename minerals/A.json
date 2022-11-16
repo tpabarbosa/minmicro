@@ -1,0 +1,850 @@
+{
+    "Acanthita": {
+        "en": {
+            "name": "Acanthita",
+            "group": "Sulfides"
+        },
+        "pt": {
+            "name": "Acanthita",
+            "group": "Sulfetos"
+        },
+        "see-also": [],
+        "formula": "Ag<sub>2</sub>S",
+        "youtube": [
+            "mR00t1OgGec", 
+            "a1nJhSfi4_8"
+        ]
+    },
+    "Acmita": {
+        "en": {
+            "name": "Acmite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Acmita",
+            "group": ""
+        },
+        "see-also": ["Aegirina"],
+        "formula": "",
+        "youtube": []
+    },
+    "Actinolita": {
+        "en": {
+            "name": "Actinolita",
+            "group": ""
+        },
+        "pt": {
+            "name": "Actinolita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Adinolização": {
+        "en": {
+            "name": "Adinolization",
+            "group": ""
+        },
+        "pt": {
+            "name": "Adinolização",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Adularia": {
+        "en": {
+            "name": "Adularia",
+            "group": ""
+        },
+        "pt": {
+            "name": "Adularia",
+            "group": ""
+        },
+        "see-also": ["Ortoclásio"],
+        "formula": "",
+        "youtube": []
+    },
+    "Aegirina": {
+        "en": {
+            "name": "Aegirine",
+            "group": "Silicatos"
+        },
+        "pt": {
+            "name": "Aegirina",
+            "group": "Silicatos"
+        },
+        "see-also": [],
+        "formula": "NaFe<sup>3<sup>+</sup></sup>Si<sub>2</sub>O<sub>6</sub>",
+        "youtube": []
+    },
+    "Aegirina-augita": {
+        "en": {
+            "name": "Aegirine-augite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Aegirina-augita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Aenigmatita": {
+        "en": {
+            "name": "Aenigmatite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Aenigmatita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Aeschynitas": {
+        "en": {
+            "name": "Aeschynite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Aeschynitas",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Ágata": {
+        "en": {
+            "name": "Agate",
+            "group": ""
+        },
+        "pt": {
+            "name": "Ágata",
+            "group": ""
+        },
+        "see-also": ["Calcedônia"],
+        "formula": "",
+        "youtube": []
+    },
+    "Aikinita": {
+        "en": {
+            "name": "Aikinite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Aikinita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Akermanita": {
+        "en": {
+            "name": "Akermanite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Akermanita",
+            "group": ""
+        },
+        "see-also": ["Melilita"],
+        "formula": "",
+        "youtube": []
+    },
+    "Alabandita": {
+        "en": {
+            "name": "Alabandite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Alabandita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Alabastro": {
+        "en": {
+            "name": "Alabaster",
+            "group": ""
+        },
+        "pt": {
+            "name": "Alabastro",
+            "group": ""
+        },
+        "see-also": ["Gipso"],
+        "formula": "",
+        "youtube": []
+    },
+    "Albita": {
+        "en": {
+            "name": "Albite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Albita",
+            "group": ""
+        },
+        "see-also": ["Plagioclásio"],
+        "formula": "",
+        "youtube": []
+    },
+    "Albitização": {
+        "en": {
+            "name": "Albitization",
+            "group": ""
+        },
+        "pt": {
+            "name": "Albitização",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Algodonita": {
+        "en": {
+            "name": "Algodonite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Algodonita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Allanita": {
+        "en": {
+            "name": "Allanite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Allanita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Allemontita": {
+        "en": {
+            "name": "Allemontite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Allemontita",
+            "group": ""
+        },
+        "see-also": ["Stibarsênio"],
+        "formula": "",
+        "youtube": []
+    },
+    "Almandina": {
+        "en": {
+            "name": "Almandine",
+            "group": ""
+        },
+        "pt": {
+            "name": "Almandina",
+            "group": ""
+        },
+        "see-also": ["Granada"],
+        "formula": "",
+        "youtube": []
+    },
+    "Altaita": {
+        "en": {
+            "name": "Altaitite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Altaita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Alterações": {
+        "en": {
+            "name": "Alterations",
+            "group": ""
+        },
+        "pt": {
+            "name": "Alterações",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Alterações de opacos": {
+        "en": {
+            "name": "Alterations of opaques",
+            "group": ""
+        },
+        "pt": {
+            "name": "Alterações de opacos",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Alumiltita": {
+        "en": {
+            "name": "Alumilite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Alumiltita",
+            "group": ""
+        },
+        "see-also": ["Alunita"],
+        "formula": "",
+        "youtube": []
+    },
+    "Alumoakermanita": {
+        "en": {
+            "name": "Alumohydroxyl-akermanite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Alumoakermanita",
+            "group": ""
+        },
+        "see-also": ["Melilita"],
+        "formula": "",
+        "youtube": []
+    },
+    "Alunita": {
+        "en": {
+            "name": "Alunite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Alunita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Alunitização": {
+        "en": {
+            "name": "Alunization",
+            "group": ""
+        },
+        "pt": {
+            "name": "Alunitização",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Amálgama": {
+        "en": {
+            "name": "Amalgam",
+            "group": ""
+        },
+        "pt": {
+            "name": "Amálgama",
+            "group": ""
+        },
+        "see-also": ["Prata", "Ouro"],
+        "formula": "",
+        "youtube": []
+    },
+    "Âmbar": {
+        "en": {
+            "name": "Amber",
+            "group": ""
+        },
+        "pt": {
+            "name": "Âmbar",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Ambrita": {
+        "en": {
+            "name": "Ambrite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Ambrita",
+            "group": ""
+        },
+        "see-also": ["Âmbar"],
+        "formula": "",
+        "youtube": []
+    },
+    "Ambligonita": {
+        "en": {
+            "name": "Ambligonite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Ambligonita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Analcima": {
+        "en": {
+            "name": "Analcime",
+            "group": ""
+        },
+        "pt": {
+            "name": "Analcima",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Anatásio": {
+        "en": {
+            "name": "Anatase",
+            "group": ""
+        },
+        "pt": {
+            "name": "Anatásio",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Andalusita": {
+        "en": {
+            "name": "Andalusite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Andalusita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Andesina": {
+        "en": {
+            "name": "Andesine",
+            "group": ""
+        },
+        "pt": {
+            "name": "Andesina",
+            "group": ""
+        },
+        "see-also": ["Plagioclásio"],
+        "formula": "",
+        "youtube": []
+    },
+    "Andorita": {
+        "en": {
+            "name": "Andorite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Andorita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Andradita": {
+        "en": {
+            "name": "Andradite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Andradita",
+            "group": ""
+        },
+        "see-also": ["Granada"],
+        "formula": "",
+        "youtube": []
+    },
+    "Anglesita": {
+        "en": {
+            "name": "Anglesite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Anglesita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Anidrita": {
+        "en": {
+            "name": "Anhydrite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Anidrita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Anilita": {
+        "en": {
+            "name": "Anilite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Anilita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Ankerita": {
+        "en": {
+            "name": "Ankerite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Ankerita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Anortita": {
+        "en": {
+            "name": "Anorthite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Anortita",
+            "group": ""
+        },
+        "see-also": ["Plagioclásio"],
+        "formula": "",
+        "youtube": []
+    },
+    "Anortoclásio": {
+        "en": {
+            "name": "Anorthoclase",
+            "group": ""
+        },
+        "pt": {
+            "name": "Anortoclásio",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Antigorita": {
+        "en": {
+            "name": "Antigorite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Antigorita",
+            "group": ""
+        },
+        "see-also": ["Serpentina"],
+        "formula": "",
+        "youtube": []
+    },
+    "Antimonita": {
+        "en": {
+            "name": "Antimonite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Antimonita",
+            "group": ""
+        },
+        "see-also": ["Estibnita"],
+        "formula": "",
+        "youtube": []
+    },
+    "Antlerita": {
+        "en": {
+            "name": "Antlerite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Antlerita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Antofilita": {
+        "en": {
+            "name": "Antofilita",
+            "group": ""
+        },
+        "pt": {
+            "name": "Antofilita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Apatita": {
+        "en": {
+            "name": "Apatite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Apatita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Apofilita": {
+        "en": {
+            "name": "Apophyllite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Apofilita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Aragonita": {
+        "en": {
+            "name": "Aragonite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Aragonita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Arfvedsonita": {
+        "en": {
+            "name": "Arfvedsonite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Arfvedsonita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Argentita": {
+        "en": {
+            "name": "Argentite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Argentita",
+            "group": ""
+        },
+        "see-also": ["Acanthita"],
+        "formula": "",
+        "youtube": []
+    },
+    "Argilização": {
+        "en": {
+            "name": "Argilization",
+            "group": ""
+        },
+        "pt": {
+            "name": "Argilização",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Argilominerais": {
+        "en": {
+            "name": "Argilominerals",
+            "group": ""
+        },
+        "pt": {
+            "name": "Argilominerais",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Arrojadita": {
+        "en": {
+            "name": "Arrojadite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Arrojadita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Arsênio": {
+        "en": {
+            "name": "Arsenic",
+            "group": ""
+        },
+        "pt": {
+            "name": "Arsênio",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Arsenopirita": {
+        "en": {
+            "name": "Arsenopyrite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Arsenopirita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Asbolana": {
+        "en": {
+            "name": "Asbolane",
+            "group": ""
+        },
+        "pt": {
+            "name": "Asbolana",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Astrophyllita": {
+        "en": {
+            "name": "Astrophyllite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Astrophyllita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Atacamita": {
+        "en": {
+            "name": "Atacamite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Atacamita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Augita": {
+        "en": {
+            "name": "Augite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Augita",
+            "group": ""
+        },
+        "see-also": ["Augita-Ti", "Fassaita"],
+        "formula": "",
+        "youtube": []
+    },
+    "Augita-Ti": {
+        "en": {
+            "name": "Augite-Ti",
+            "group": ""
+        },
+        "pt": {
+            "name": "Augita-Ti",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Auricalcita": {
+        "en": {
+            "name": "Auricalcite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Auricalcita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Awaruita": {
+        "en": {
+            "name": "Awaruite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Awaruita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    },
+    "Azurita": {
+        "en": {
+            "name": "Azurite",
+            "group": ""
+        },
+        "pt": {
+            "name": "Azurita",
+            "group": ""
+        },
+        "see-also": [],
+        "formula": "",
+        "youtube": []
+    }
+}
