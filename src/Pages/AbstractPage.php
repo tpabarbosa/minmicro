@@ -36,7 +36,7 @@ abstract class AbstractPage
         $this->site = new Site($locale, $config);
         $this->page = new Page($locale);
         $this->header = new Header($locale, $config);
-        $this->footer = new Footer();
+        $this->footer = new Footer($config);
     }
 
     protected function view($template, $template_data = [])

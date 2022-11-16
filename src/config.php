@@ -19,7 +19,7 @@ return [
         ]
     ],
     'SITE' => [
-        'LOGO_URL' => 'https://www.ufrgs.br/minmicro/logo.jpg',
+        'LOGO_URL' => '/images/logoUFRGS.jpg',
         'NAVBAR_LINKS' => [
             'About' => [],
             'Minerals' => [],
