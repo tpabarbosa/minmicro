@@ -388,6 +388,7 @@ class Router
     */
     private function patternMatches($pattern, $uri, &$matches, $flags)
     {
+        var_dump("URI: ", $uri);
       // Replace all curly braces matches {} into word patterns (like Laravel)
       $pattern = preg_replace('/\/{(.*?)}/', '/(.*?)', $pattern);
         var_dump("PADRAO: ", '\\' . $pattern);
