@@ -33,9 +33,11 @@ $dotenv->safeLoad();
 
     $router->get("/assets(/.*.(css|js))", function ($file, $type) use ($twig, $locale, $config) {
         $filename = "/tmp/assets/{$file}{$type}";
+        var_dump($filename);
         $fileType = $type === 'js' ? 'text/javascript' : 'text/css';
+        var_dump($fileType);
         if (is_file($filename)) {
-            // file_get_contents($filename);
+            var_dump(file_get_contents($filename));
             $fd = fopen($filename, 'rb');
             ob_clean();
             header('Content-Type:' . $fileType);
