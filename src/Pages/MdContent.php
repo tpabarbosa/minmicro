@@ -26,6 +26,14 @@ class MdContent extends AbstractPage
         }
 
         $this->route = $route;
+
+        $minerals = $this->locale->getText('route.minerals');
+        preg_match("/{$minerals}(\/[A-Z])?/", $route, $matches);
+        if ($matches[1]) {
+            $page = new Minerals($this->langAlias, $this->twig, $this->locale, $this->config);
+            $page->render($matches[1]);
+        }
+
         $fileFullPath = $this->getFileFullPath($route);
 
         $data = [];
