@@ -12,7 +12,7 @@ class TwigRenderer
     protected $twig;
 
     const CACHE_PATH = '/tmp';//__DIR__ . '/../../tmp';
-    const TWIG_PUBLIC_PATH = __DIR__ . '/../../public/assets';
+    const TWIG_PUBLIC_PATH = __DIR__ . '/../../temp/assets';//__DIR__ . '/../../public/assets';
     const TWIG_TEMPLATES_PATH = __DIR__ . '/../../templates';
     private $DEVELOPMENT_MODE;
 
@@ -80,9 +80,10 @@ class TwigRenderer
     {
         return [
             'path' => self::TWIG_PUBLIC_PATH,
+            'path_chmod' => -1,
             'url_base_path' => $this->baseUrl . '/assets/',
             'cache_path' => self::CACHE_PATH,
-            'cache_name' => 'assets',
+            'cache_name' => 'cache/assets',
             'cache_lifetime' => -1,
             'minify' => !$this->DEVELOPMENT_MODE
         ];
