@@ -32,7 +32,7 @@ $dotenv->safeLoad();
     });
 
     $router->get("/assets(/.*.(css|js))", function ($file, $type) use ($twig, $locale, $config) {
-        $filename = "/tmp/assets/{$file}{$type}";
+        $filename = __DIR__ . "/../tmp/assets/{$file}{$type}";
         var_dump($filename);
         $fileType = $type === 'js' ? 'text/javascript' : 'text/css';
         var_dump($fileType);
@@ -46,6 +46,7 @@ $dotenv->safeLoad();
                 ob_flush();
             }
             fclose($fd);
+            die();
         } else {
             $notFound = new Error('pt', $twig, $locale, $config);
             $notFound->render();

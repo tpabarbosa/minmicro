@@ -19,8 +19,9 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
     />
-    
-    {{ assets({
+    <link rel="stylesheet" href="{{ site.baseUrl }}/assets/main.css">
+
+    {{ call_function_if_it_exists('assets', {
         files: [
             'layout/_colors.css',
             'layout/main.css',
@@ -32,6 +33,7 @@
             ], 
         name: 'main.css'
     }) }}
+    
 
     {% block head %}{% endblock %}
 </head>
@@ -45,12 +47,15 @@
     
     {{ include('layout/footer.twig') }}
 
-    {{ assets({
+    {{ call_function_if_it_exists('assets',  {
         files: [
             'layout/navbar.js',
             ], 
         name: 'main.js'
     }) }}
+    
+
+    <script src="http://192.168.0.161:8084/assets/main.js"></script>
 
     {% block scripts %}{% endblock %}
 

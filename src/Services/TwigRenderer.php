@@ -11,8 +11,8 @@ class TwigRenderer
 {
     protected $twig;
 
-    const CACHE_PATH = '/tmp';//__DIR__ . '/../../tmp';//
-    const TWIG_PUBLIC_PATH = '/tmp/assets';//__DIR__ . '/../../tmp/assets';//__DIR__ . '/../../public/assets';
+    const CACHE_PATH = __DIR__ . '/../../tmp';//'/tmp';//
+    const TWIG_PUBLIC_PATH = __DIR__ . '/../../tmp/assets';//'/tmp/assets';//__DIR__ . '/../../public/assets';
     const TWIG_TEMPLATES_PATH = __DIR__ . '/../../templates';
     private $DEVELOPMENT_MODE;
 
@@ -25,18 +25,22 @@ class TwigRenderer
         $this->DEVELOPMENT_MODE = $mode;
         $this->baseUrl = $baseUrl;
 
-        if (!is_dir('/tmp')) {
-            mkdir('/tmp');
+        if (!is_dir(self::CACHE_PATH)) {
+            mkdir(self::CACHE_PATH);
         }
-        if (!is_dir('/tmp/assets')) {
-            mkdir('/tmp/assets');
+        if (!is_dir(self::TWIG_PUBLIC_PATH)) {
+            mkdir(self::TWIG_PUBLIC_PATH);
         }
 
         $loader = new \Twig\Loader\FilesystemLoader(self::TWIG_TEMPLATES_PATH);
         $twig = new \Twig\Environment($loader, $this->getTwigOptions());
 
-        $twig->addExtension(new TwigAssetsExtension($twig, $this->getAssetsOptions()));
-        $twig->addExtension(new DebugExtension());
+
+        if ($this->DEVELOPMENT_MODE) {
+            $twig->addExtension(new TwigAssetsExtension($twig, $this->getAssetsOptions()));
+            $twig->addExtension(new DebugExtension());
+        }
+
         $twig->addFunction(new TwigFunction('call_filter_if_it_exists', function ($env, $input, $filter, ...$args) {
             $filter = $env->getFilter($filter);
 
@@ -48,6 +52,17 @@ class TwigRenderer
         }, ['needs_environment' => true]));
 
 
+        $twig->addFunction(new TwigFunction('call_function_if_it_exists', function ($env, $func, ...$args) {
+
+            $func = $env->getFunction($func);
+            $test = $func->getCallable()(...$args);
+
+            if (!$func) {
+                return '';
+            }
+
+            return $test;
+        }, ['needs_environment' => true]));
 
         $this->twig = $twig;
     }
