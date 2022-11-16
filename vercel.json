@@ -6,10 +6,6 @@
     ],
     "rewrites": [
         {
-            "source": "/assets/:match*",
-            "destination": "/tmp/:match*"
-        },
-        {
             "source": "/images/:match*",
             "destination": "/public/images/:match*"
         },
