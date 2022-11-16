@@ -56,13 +56,13 @@ $dotenv->safeLoad();
     // Rotas Minerais
     $router->get("/{$locale->getTranslation('route.minerals', 'pt-BR')}(/\w)?", function ($letter) use ($twig, $locale, $config) {
         $page = new Minerals('pt', $twig, $locale, $config);
-        var_dump($page);die();
+        var_dump($letter);die();
         $page->render($letter);
     });
 
     $router->get("/({$localeRegex})/({$minerals})(/\w)?", function ($lang, $route, $letter) use ($twig, $locale, $config) {
         $page = new Minerals($lang, $twig, $locale, $config);
-        var_dump($page);die();
+        var_dump($letter);die();
         $page->render($letter);
     });
 
