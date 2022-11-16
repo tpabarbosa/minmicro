@@ -391,10 +391,10 @@ class Router
         var_dump("URI: ", $uri);
       // Replace all curly braces matches {} into word patterns (like Laravel)
       $pattern = preg_replace('/\/{(.*?)}/', '/(.*?)', $pattern);
-        var_dump("PADRAO: ", '\\' . $pattern);
-        var_dump("PREG_MATCH_ALL: ", preg_match_all('#^' .'\\'. $pattern . '$#', $uri, $matches, PREG_OFFSET_CAPTURE));
+        var_dump("PADRAO: ", $pattern);
+        var_dump("PREG_MATCH_ALL: ", preg_match_all('#^' . $pattern . '$#', $uri, $matches, PREG_OFFSET_CAPTURE));
       // we may have a match!
-      return boolval(preg_match_all('#^' . '\\' .$pattern . '$#', $uri, $matches, PREG_OFFSET_CAPTURE));
+      return boolval(preg_match_all('#^' . $pattern . '$#', $uri, $matches, PREG_OFFSET_CAPTURE));
     }
 
     /**

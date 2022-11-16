@@ -26,6 +26,8 @@ $dotenv->safeLoad();
     $test = $locale->getTranslation('route.minerals', 'pt-BR');
     // Rotas Home
     $router->setNamespace('\MinMicro\Pages');
+
+    $router->setBasePath('/');
     $router->get("/({$localeRegex})?", function ($lang) use ($twig, $locale, $config) {
         $page = new Home($lang, $twig, $locale, $config);
         $page->render();
