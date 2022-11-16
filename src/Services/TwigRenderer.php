@@ -53,16 +53,20 @@ class TwigRenderer
         }, ['needs_environment' => true]));
 
 
-        $twig->addFunction(new TwigFunction('call_function_if_it_exists', function ($env, $func, ...$args) {
+        $twig->addFunction(new TwigFunction('call_assets_if_it_exists', function ($env, $func, ...$args) {
+            if (!$env->hasExtension(TwigAssetsExtension::class)) {
+                return;
+            }
+            $ext = $env->getExtension(TwigAssetsExtension::class);
 
-            $func = $env->getFunction($func);
-            $test = $func->getCallable()(...$args);
+
+            $func = $ext->assets(...$args);
 
             if (!$func) {
                 return '';
             }
-
-            return $test;
+            // $html = $func->getCallable()(...$args);
+            return $func;
         }, ['needs_environment' => true]));
 
         $this->twig = $twig;
@@ -98,7 +102,7 @@ class TwigRenderer
         return [
             'debug' => !!$this->DEVELOPMENT_MODE,
             'auto-reload' => true,
-            'cache' => !$this->DEVELOPMENT_MODE ? self::CACHE_PATH : false,
+            'cache' => false//!$this->DEVELOPMENT_MODE ? self::CACHE_PATH : false,
         ];
     }
 

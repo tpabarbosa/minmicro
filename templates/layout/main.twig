@@ -21,7 +21,7 @@
     />
     <link rel="stylesheet" href="{{ site.baseUrl }}/assets/main.css">
 
-    {{ call_function_if_it_exists('assets', {
+    {{ call_assets_if_it_exists('assets', {
         files: [
             'layout/_colors.css',
             'layout/main.css',
@@ -32,7 +32,7 @@
             'layout/breadcrumb.css',
             ], 
         name: 'main.css'
-    }) }}
+    })|raw }}
     
 
     {% block head %}{% endblock %}
@@ -47,16 +47,15 @@
     
     {{ include('layout/footer.twig') }}
 
-    {{ call_function_if_it_exists('assets',  {
+    <script src="http://192.168.0.161:8084/assets/main.js"></script>
+    
+    {{ call_assets_if_it_exists('assets',  {
         files: [
             'layout/navbar.js',
             ], 
         name: 'main.js'
-    }) }}
+    })|raw }}
     
-
-    <script src="http://192.168.0.161:8084/assets/main.js"></script>
-
     {% block scripts %}{% endblock %}
 
 </body>
