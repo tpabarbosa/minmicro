@@ -9,7 +9,7 @@ class TwigRenderer
 {
     protected $twig;
 
-    const CACHE_PATH = __DIR__ . '/../../tmp';
+    const CACHE_PATH = '/tmp';//__DIR__ . '/../../tmp';
     const TWIG_PUBLIC_PATH = __DIR__ . '/../../public/assets';
     const TWIG_TEMPLATES_PATH = __DIR__ . '/../../templates';
     private $DEVELOPMENT_MODE;
