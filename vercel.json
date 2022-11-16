@@ -12,10 +12,12 @@
         {
             "source": "/images/:match*",
             "destination": "/public/images/:match*"
-        },
+        }
+    ],
+    "routes": [
         {
-            "source": "/(.*)",
-            "destination": "/api/index.php"
+            "src": "/(.*)",
+            "dest": "/api/index.php"
         }
     ]
 }
