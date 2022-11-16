@@ -19,7 +19,8 @@ return [
         ]
     ],
     'SITE' => [
-        'LOGO_URL' => '/images/logoUFRGS.jpg',
+        'LOGO_URL' => '/images/logo.jpg',
+        'LOGO_FOOTER_URL' => '/images/logoUFRGS.jpg',
         'NAVBAR_LINKS' => [
             'About' => [],
             'Minerals' => [],

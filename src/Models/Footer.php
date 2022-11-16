@@ -14,7 +14,7 @@ class Footer
 
     public function __construct($config)
     {
-        $this->logoUrl = $config['BASE_URL'].$config['SITE']['LOGO_URL'];
+        $this->logoUrl = $config['SITE']['LOGO_FOOTER_URL'];
         $this->credits = sprintf(self::DEFAULT_CREDITS, date('Y'));
     }
 
