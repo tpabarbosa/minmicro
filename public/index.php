@@ -31,7 +31,7 @@ $dotenv->safeLoad();
         $page->render();
     });
 
-    $router->get("/assets(/.*))", function ($file) use ($twig, $locale, $config) {
+    $router->get("/assets(/.*)", function ($file) use ($twig, $locale, $config) {
         if (is_file(__DIR__ . "/../tmp/assets/{$file}")) {
             echo file_get_contents($file);
         } else {
