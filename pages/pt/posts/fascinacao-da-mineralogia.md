@@ -5,7 +5,7 @@ keywords: identificação, mineral transparente, mineral opaco, método passo a 
 !headerStyle: small
 !headerImageUrl:
 !headerImageAlt:
-linkImageUrl: /images/fascinacao-da-mineralogia
+linkImageUrl: /images/fascinacao-da-mineralogia.png
 linkImageAlt: esquerda nicóis descruzados, direita nicóis cruzados
 ---
 
@@ -21,4 +21,4 @@ Na seção polida, a Luz Refletida, apareceu isso (esquerda nicóis descruzados,
 
 O desafio: fazer uma lâmina delgada e descobrir o que é.
 
-![esquerda nicóis descruzados, direita nicóis cruzados](/images/fascinacao-da-mineralogia){.centered}
+![esquerda nicóis descruzados, direita nicóis cruzados](/images/fascinacao-da-mineralogia.png){.centered}
