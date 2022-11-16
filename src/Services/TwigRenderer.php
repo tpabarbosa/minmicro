@@ -84,7 +84,7 @@ class TwigRenderer
             'url_base_path' => $this->baseUrl . '/assets/',
             'cache_path' => self::CACHE_PATH,
             'cache_name' => 'cache-assets',
-            'cache_lifetime' => -1,
+            'cache_lifetime' => 0,
             'minify' => !$this->DEVELOPMENT_MODE
         ];
     }
