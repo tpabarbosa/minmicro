@@ -55,11 +55,16 @@ $dotenv->safeLoad();
 
     // Rotas Minerais
     $router->get("/{$locale->getTranslation('route.minerals', 'pt-BR')}(/[A-Z])?", function ($letter) use ($twig, $locale, $config) {
+        var_dump($letter);
+        var_dump($_SERVER); die();
+
         $page = new Minerals('pt', $twig, $locale, $config);
         $page->render($letter);
     });
 
     $router->get("/({$localeRegex})/({$minerals})(/[A-Z])?", function ($lang, $route, $letter) use ($twig, $locale, $config) {
+        var_dump($letter);
+        var_dump($_SERVER); die();
         $page = new Minerals($lang, $twig, $locale, $config);
         $page->render($letter);
     });
@@ -73,7 +78,7 @@ $dotenv->safeLoad();
     });
 
     $router->get('/(([0-9A-Za-z-]+\/?)+)', function (...$file) use ($twig, $locale, $config) {
-        var_dump($_SERVER); die();
+        //var_dump($_SERVER);
         $page = new MdContent('pt', $twig, $locale, $config);
         $page->render($file, 'pt');
     });
