@@ -7,7 +7,7 @@
     "routes": [
         {
             "src": "/(assets)/(.*)",
-            "dest": "tmp/assets/$1"
+            "dest": "tmp/$1"
         },
         {
             "src": "/(images)/(.*)",
