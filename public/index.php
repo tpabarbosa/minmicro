@@ -12,7 +12,7 @@ use MinMicro\Services\TwigRenderer;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
+$dotenv->safeLoad();
 
 // try {
     $config = require(__DIR__ . '/../src/config.php');
